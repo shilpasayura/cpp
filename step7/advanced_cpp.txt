@@ -16,4 +16,7 @@ OOP Lab
 https://github.com/rhazra-003/OOPLab
 
 ACP ICPC Competitive Programming
-https://github.com/BedirT/ACM-ICPC-Preparation
+https://github.com/CalebCurry/python
+
+Project Eular
+https://github.com/stbrumme/euler
