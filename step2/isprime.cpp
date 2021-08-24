@@ -1,27 +1,30 @@
-#include<iostream>
-#include<string.h>
-
+#include <iostream>
 using namespace std;
-//convert hexadecimal to decimal
 
 int main() {
-   char num[] = "FF";
-   int len = strlen(num);
-   int base = 1;
-   int temp = 0;
+    int i, n;
+    bool isPrime = true;
+    cout << "Enter an integer: ";
+    cin >> n;
+    // 0 and 1 are not prime numbers
+    if (n == 0 || n == 1) {
+        isPrime= false;
+    }
+    else {
+       for (i = 2; i <= n / 2; ++i){
+            if (n % i == 0) {
+                isPrime= false;
+                break;
+            }
+        }
+       
+    }
 
-   for (int i=len-1; i>=0; i--) {
-      if (num[i]>='0' && num[i]<='9') {
-         temp += (num[i] - 48)*base;
-         base = base * 16;
-      }
-      else if (num[i]>='A' && num[i]<='F') {
-         temp += (num[i] - 55)*base;
-         base = base*16;
-      }
-   }
-  
- cout<<num<<"  :.  " << temp <<endl;
-   return 0;
+    if (isPrime){
+        cout << n << " is a prime number";
+    }
+    else{
+        cout << n << " is not a prime number";
+    }
+    return 0;
 }
-
